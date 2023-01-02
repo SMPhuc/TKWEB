@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/btn.css">
+    <link rel="stylesheet" href="styles/cart.css">
+    <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+     <link rel="stylesheet" href="styles/styleofcontact.css">
+    <script src="js/main.js" async></script>
+    <script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function(){ 
+
+            $('#Contact_a').click(function(){
+                window.scrollTo({
+                    left:0,
+                    bot:0,
+                    behavior: "smooth"
+                });
+            });
+        });
+    </script>
+    <title>Shopping Cart</title>
+</head>
+
+<body>  
+    
+    <header>
+        <div class="navbar">
+            <strong>
+                <div class="logo">Vietnamese Cuisine Delivery</div>
+            </strong>
+        </div>
+    
+        <div class="navbar-container">
+            <div class="topnav">
+    
+                <a href="index.html">Home</a>
+                <a class="Contact_a" href="">Contact</a>
+                <a class="About_a" href="">About</a>
+                <div id="action"></div>
+            </div>
+    
+            <!--CART-->
+            <div id="cart-info" class="nav-info cart-info">
+                <span class="cart-info__icon"><i class="fas fa-shopping-cart"></i></span>
+                <p><span id="item-count">0 </span> items
+                </p>
+            </div>
+    
+            <section class="cart" id="cart">
+                <h1 class="section-header">CART</h1>
+                <div class="cart-row">
+                    <span class="cart-item cart-header cart-column">ITEM</span>
+                    <span class="cart-price cart-header cart-column">PRICE</span>
+                    <span class="cart-quantity cart-header cart-column">QUANTITY</span>
+                </div>
+                <div class="cart-items">
+                </div>
+                <div class="cart-total">
+                    <strong class="cart-total-title">Total</strong>
+                    <span class="cart-total-price">0 VND</span>
+                </div>
+                <div class="button-borders">
+
+                    <button class="btn btn-primary btn-purchase" type="button">PURCHASE</button>
+                </div>
+            </section>
+    
+        </div>
+    </header>
+
+    <div class="main-container">
+        <P class="title">Foods</P>
+    </div>
+    
+    <div id="filterButtons">
+        <button class="btn active" onclick="filterSelection('all')">All</button>
+        <button class="btn" onclick="filterSelection('MienBac')">Miền Bắc</button>
+        <button class="btn" onclick="filterSelection('MienTrung')">Miền Trung</button>
+        <button class="btn" onclick="filterSelection('MienNam')">Miền Nam</button>
+    </div>
+    
+    
+    <section class="container">
+        <div class="products">
+            <div class="product MienBac">
+                    <img src="source/BanhMi.jpg" class="product__image">
+                    <h5 class="product-title">Bánh Mì</h5>
+                    “Bánh mì”, niềm tự hào của dân tộc và là đại diện cho tinh hoa ẩm thực Việt.
+                    <div class="shop-item-details">
+                        <h3 class="product_price">20.000VND</h3>
+                        <button class="btn btn--primary ADD_TO_CART">Add to Cart</button>
+                        <a id="options">
+                            Bánh mì là đặc sản đường phố bất cứ du khách nào cũng muốn thử khi đến Việt Nam.  Món đồ ăn bình dân này có thể tìm thấy ở khắp các con phố, các miền quê hay bất kì nơi đâu trên dãi đất hình chữ S này.
+                        </a>
+                </div>
+            </div>
+            <div class="product MienBac">
+                <img src="source/pho.jpg" class="product__image">
+                <h5 class="product-title">Phở Hà Nội</h5>
+                Đặc sắc ẩm thực Thủ đô
+                    <div class="shop-item-details">
+                    <h3 class="product_price">50.000 VND</h3>
+                    <button class="btn btn--primary ADD_TO_CART">Add to Cart</button>
+                    <a id="options">
+                        Phở là một món ăn truyền thống của Việt Nam, có nguồn gốc từ Nam Định, Hà Nội và được xem là một trong những món ăn tiêu biểu cho nền ẩm thực Việt Nam. Thành phần chính của phở là bánh phở và nước dùng cùng với thịt bò hoặc thịt gà cắt lát mỏng. Thịt bò thích hợp nhất để nấu phở là thịt, xương từ các giống bò ta
+                    </a>
+                </div>
+            </div>
+
+            <div class="product MienBac">
+                <img src="source/BunChaHaNoi.jpg" class="product__image">
+                <h5 class="product-title">Bún chả Hà Nội</h5>
+                Món ăn đặc sản miền Bắc
+                <div class="shop-item-details">
+                    <h3 class="product_price">45.000 VND</h3>
+                    <button class="btn btn--primary ADD_TO_CART">Add to Cart</button>
+                    <a id="options">
+                        Bún chả là một món ăn của Việt Nam, bao gồm bún, chả thịt lợn nướng trên than hoa và bát nước mắm chua cay mặn ngọt. Món ăn xuất xứ từ miền Bắc Việt Nam, là thứ quà có sức sống lâu bền nhất của Hà Nội, nên có thể coi đây là một trong những đặc sản đặc trưng của ẩm thực Hà thành.
+                    </a>
+                </div>
+            </div>
+
+            <div class="product MienBac">
+                <img src="source/ChaCaLaVong.jpg" class="product__image">
+                <h5 class="product-title">Chả cá Lã Vọng</h5>
+                Món ngon có từ lâu đời của Hà thành
+                <div class="shop-item-details">
+                    <h3 class="product_price">175.000 VND</h3>
+                    <button class="btn btn--primary ADD_TO_CART">Add to Cart</button>
+                    <a id="options">
+                        Chả cá Lã Vọng là tên của món chả cá đặc sản Hà Nội. Đây là món chả làm từ cá (thường là cá lăng) thái miếng đem tẩm ướp, nướng trên than củi rồi rán lại trong chảo mỡ, do gia đình họ Đoàn tại số nhà 14 phố Chả Cá (trước đây là phố Hàng Sơn) trong khu phố cổ giữ bí quyết kinh doanh từ năm 1871 và đặt tên cho nó như trên.
+                    </a>
+                </div>
+            </div>
+
+            <div class="product MienBac">
+                <img src="source/BanhDaKienKhe.jpg" class="product__image">
+                <h5 class="product-title">Bánh đa Kiện Khê</h5>
+                Đặc sản miền Bắc làm quà của Hà Nam
+                <div class="shop-item-details">
+                    <h3 class="product_price">20.000 VND</h3>
+                    <button class="btn btn--primary ADD_TO_CART">Add to Cart</button>
+                    <a id="options">
+                        Bánh đa Kiện Khê là loại bánh đa khô tráng vừng và lạc, cũng là một trong những món ngon - món ăn đặc sản nổi tiếng của tỉnh Hà Nam, nay đã có mặt tại Hà Nội.
+                        Vị ngọt mềm của chuối chín làm dịu cái khô giòn của bánh đa nhưng tăng độ ngọt quả là một sáng tạo đầy bất ngờ.
+                    </a>
+                </div>
+            </div>
+
+            <div class="product MienTrung">
+                <img src="source/BunBoHue.jpg" class="product__image">
+                <h5 class="product-title">Bún bò Huế</h5>
+                Đặc sản dân dã làm say lòng biết bao thực khách
+                <div class="shop-item-details">
+                    <h3 class="product_price">35.000 VND</h3>
+                    <button class="btn btn--primary ADD_TO_CART">Add to Cart</button>
+                    <a id="options">
+                        Bún bò là một trong những đặc sản của xứ Huế, mặc dù món bún này phổ biến trên cả ba miền ở Việt Nam và cả người Việt tại hải ngoại.
+                        Món ăn có nguyên liệu chính là bún, thịt bắp bò, giò heo, cùng nước dùng có màu đỏ đặc trưng và vị sả và ruốc. 
+                    </a>
+                </div>
+            </div>
+
+            <div class="product MienTrung">
+                <img src="source/MiQuang.jpg" class="product__image">
+                <h5 class="product-title">Mì Quảng</h5>
+                Tinh túy ẩm thực Đà Nẵng Quảng Nam
+                <div class="shop-item-details">
+                    <h3 class="product_price">40.000 VND</h3>
+                    <button class="btn btn--primary ADD_TO_CART">Add to Cart</button>
+                    <a id="options">
+                        Mỳ Quảng là một món ăn đặc sản đặc trưng của Quảng Nam và Đà Nẵng, Việt Nam.
+                        Dưới lớp mỳ là các loại rau sống 9 vị, trên mỳ là thịt lợn, tôm, thịt gà, (đôi khi có trứng luộc) cùng với một loại nước dùng được hầm từ xương nhưng rất cô đặc và ít nước.
+                        Ngoài ra mỳ còn được dùng kèm với bánh tráng mè, thêm cả đậu phộng rang giòn thơm tạo nên hương vị đặc trưng.
+                    </a>
+                </div>
+            </div>
+
+            <div class="product MienTrung">
+                <img src="source/BanhCan.jpg" class="product__image">
+                <h5 class="product-title">Bánh căn</h5>
+                'Linh hồn' của ẩm thực đất Ninh Thuận
+                <div class="shop-item-details">
+                    <h3 class="product_price">22.000 VND / 1 phần</h3>
+                    <button class="btn btn--primary ADD_TO_CART">Add to Cart</button>
+                    <a id="options">
+                        Bánh căn là một loại bánh phổ biến của Ninh Thuận, Bình Thuận.
+                        Bánh căn thường ít được dọn cùng rau sống ăn lá, mà thường ăn kèm với xoài xanh, khế chua, dưa leo băm sợi.
+                        Nước chấm đi kèm theo thường là nước mắm pha loãng, tỏi, ớt, khi dùng thường nhúng nguyên bánh vào nước chấm.
+                    </a>
+                </div>
+            </div>
+            
+            <div class="product MienTrung">
+                <img src="source/CaoLau.jpg" class="product__image">
+                <h5 class="product-title">Cao lầu</h5>
+                Nét đặc trưng văn hóa ẩm thực phố Hội
+                <div class="shop-item-details">
+                    <h3 class="product_price">30.000 VND</h3>
+                    <button class="btn btn--primary ADD_TO_CART">Add to Cart</button>
+                    <a id="options">
+                        Cao lầu là một món mì ở Quảng Nam, Việt Nam. Đây được xem là món ăn đặc sản của thành phố Hội An. Món mì này có sợi mì màu vàng, được dùng với tôm, thịt heo, các loại rau sống và rất ít nước dùng. Sợi mì màu vàng là do được trộn với tro từ một loại cây ở địa phương.
+                    </a>
+                </div>
+            </div>
+            
+            <div class="product MienNam">
+                <img src="source/ComTam.jpg" class="product__image">
+                <h5 class="product-title">Cơm Tấm Sài Gòn</h5>
+                Cơm Tấm Sườn-Bì-Chả đặc sản Sài Gòn
+                <div class="shop-item-details">
+                    <h3 class="product_price">40.000 VND</h3>
+                    <button class="btn btn--primary ADD_TO_CART">Add to Cart</button>
+                    <a id="options">
+                        Đến Sài Gòn mà bạn không thử món cơm tấm thì chưa được xem là đã đến Sài Gòn. Bạn sẽ không thể tìm thấy hương vị đó ở những nơi khác ngoài Sài Gòn. Với món này, người dân Sài Gòn có thể ăn từ bữa sáng đến bữa trưa, bữa tối và thậm chí là vào lúc đêm muộn vẫn muốn ăn vì cảm giác thiếu không thể ngủ được. 
+                    </a>
+                </div>
+            </div>
+            
+            <div class="product MienNam">
+                <img src="source/BanhCanhGhe.jpg" class="product__image">
+                <h5 class="product-title">Bánh canh ghẹ</h5>
+                Đặc sản miền Nam nổi tiếng tại khu vực biển Vũng Tàu
+                <div class="shop-item-details">
+                    <h3 class="product_price">70.000 VND</h3>
+                    <button class="btn btn--primary ADD_TO_CART">Add to Cart</button>
+                    <a id="options">
+                        Bánh canh ghẹ là một món ăn được rất nhiều người ưa thích, bởi vị ngon, ngọt của thịt ghẹ kết hợp với nước dùng ngọt thanh được hầm từ xương.
+                        Bánh canh ghẹ với nước dùng sền sệt, ngọt thanh kết hợp với sợi bánh canh dai dai đã góp phần tạo nên hương vị hấp dẫn làm siêu lòng không biết bao nhiêu tâm hồn ăn uống.
+                    </a>
+                </div>
+                
+            </div>
+            <div class="product MienNam">
+                <img src="source/BanhDuc.jpg" class="product__image">
+                <h5 class="product-title">Bánh đúc lá dứa</h5>
+                Bánh đúc lá dứa với vị béo ngậy mê say
+                <div class="shop-item-details">
+                    <h3 class="product_price">15.000 VND</h3>
+                    <button class="btn btn--primary ADD_TO_CART">Add to Cart</button>
+                    <a id="options">
+                        Bánh đúc là một loại bánh của Việt Nam, thường được làm bằng bột gạo với một số gia vị. 
+                        Không chỉ được ăn như một thức quà quê, bữa ăn sáng mà điển hình là bánh đúc chấm tương, bánh đúc cũng có thể ăn kèm với canh riêu cua, rau thơm, mắm tôm, mật ong, mật mía, mứt trái cây và thậm chí cả cá kho, thịt kho tùy thích.
+                    </a>
+                </div>
+            </div>
+            
+            <div class="product MienNam">
+                <img src="source/BanhXeo.jpg" class="product__image">
+                <h5 class="product-title">Bánh xèo</h5>
+                Xèo Xèo Xèo....
+                <div class="shop-item-details">
+                    <h3 class="product_price">35.000 VND</h3>
+                    <button class="btn btn--primary ADD_TO_CART">Add to Cart</button>
+                    <a id="options">
+                        Miếng bánh xèo vàng ươm, giòn rụm được bao bọc bên ngoài bởi các loại rau sống ngon không thể chối từ. Bạn cuộn bánh lại thành miếng vừa ăn rồi chấm ngay vào bát nước chấm tỏi ớt đượm vị và thưởng thức ngay để cảm nhận được mĩ vị trên đời.
+                    </a>
+                </div>
+            </div> 
+            <div class="product MienNam">
+                <img src="source/banhtamngandua.jpg" class="product__image">
+                <h5 class="product-title">Bánh tằm Ngan Dừa</h5>
+                Đặc sản nổi tiếng ở vùng đất công tử Bạc Liêu
+                <div class="shop-item-details">
+                    <h3 class="product_price">20.000 VND / 1 hộp</h3>
+                    <button class="btn btn--primary ADD_TO_CART">Add to Cart</button>
+                    <a id="options">
+
+                        Nhờ được chế biến từ bột gạo lúa mùa nên cọng bánh rất thơm ngon, dẻo dai, cọng bánh thô to có cảm giác “xừn xựt” khi nhai tạo cảm giác thú vị khó quên.
+                        Ăn kèm nước cốt dừa ngọt thơm béo ngậy chan cùng nước mắm chua cay.
+                        Hai hương vị đối lập nhau nhưng khi kết hợp lại tạo nên sự lạ miệng, ăn không hề ngấy.
+                    </a>
+                </div>
+            </div>
+
+                <div class="product MienTrung">
+                    <img src="source/nemnuong.jpg" class="product__image">
+                    <h5 class="product-title">Nem nướng </h5>
+                    Đặc sản trứ danh Khánh Hòa
+                    <div class="shop-item-details">
+                        <h3 class="product_price">50.000 VND / 1 phần</h3>
+                        <button class="btn btn--primary ADD_TO_CART">Add to Cart</button>
+                        <a id="options">
+                            Nem nướng là món thịt heo nướng hoặc thịt viên nướng của Việt Nam, và là một món ăn phổ biến ở quốc gia này, đôi khi được dùng như một món khai vị hoặc món ăn nhẹ riêng lẻ, hoặc ăn kèm bún (hoặc cơm) như một món chính. Nem nướng là đặc sản của tỉnh Khánh Hòa (Nha Trang).
+                            
+                        </a>
+                    </div>
+                </div>
+                <div class="product MienBac">
+                    <img src="source/bunmoc.jpg" class="product__image">
+                    <h5 class="product-title">Bún Mọc </h5>
+                    Đặc sản nổi tiếng đến từ làng Mọc-Hà Nội.
+                    <div class="shop-item-details">
+                        <h3 class="product_price">35.000 VND</h3>
+                        <button class="btn btn--primary ADD_TO_CART">Add to Cart</button>
+                        <a id="options">
+                            Bún mọc hay bún mộc, là món ăn bắt nguồn từ làng Mọc, Nhân Chính. Ngày nay, bún mọc đã có mặt ở khắp các vùng miền trên đất nước và món ăn này cũng được biến tấu hài hòa để phù hợp với văn hóa ẩm thực của mỗi nơi.                        </a>
+                    </div>
+                </div>
+
+                <div class="product MienNam">
+                    <img src="source/banhcong.jpeg" class="product__image">
+                    <h5 class="product-title">Bánh Cống</h5>
+                    Bánh Cống đặc sản của người Khmer Nam Bộ
+                    <div class="shop-item-details">
+                        <h3 class="product_price">25.000 VND </h3>
+                        <button class="btn btn--primary ADD_TO_CART">Add to Cart</button>
+                        <a id="options">
+                            Bánh cống là một món ăn ở tỉnh Sóc Trăng, Việt Nam, là đặc sản của người Khmer Nam bộ.
+                            Trên mặt bánh, một con tôm nằm khoanh tròn trông rất hấp dẫn. Cắn vào một miếng, bột bánh giòn tan lan toả trong miệng, mùi vị thơm nức, đượm béo của ít mỡ sa.
+                        </a>
+                    </div>
+                </div>
+                <div class="product MienTrung">
+                    <img src="source/Comhen.jpg" class="product__image">
+                    <h5 class="product-title">Cơm Hến</h5>
+                   Tinh hoa ẩm thực vùng đất Cố Đô
+                    <div class="shop-item-details">
+                        <h3 class="product_price">20.000 VND</h3>
+                        <button class="btn btn--primary ADD_TO_CART">Add to Cart</button>
+                        <a id="options">
+                            Cơm hến Huế là một món ăn dân giã, bình dị. Món ăn này có mặt ở khắp nơi từ các quán nhỏ ven đường cho tới các nhà hàng cao cấp. Nếu có dịp đến Huế bạn đừng ngần ngại thử món ăn này để cảm nhận hết phẩm chất, cốt cách con người xứ Huế. 
+                        </a>
+                    </div>
+                </div>
+        </div> 
+    </section> 
+</body>
+<div id="about">
+     <h1> ABOUT </h1>  
+        <h4>
+            Trang web này được thiết kế nhằm mục đích đẩy mạnh tuyên truyền, quảng bá, giới thiệu các món ăn đặc sắc thuần Việt của Việt Nam đến người dân trong nước và cộng đồng quốc tế; góp phần quảng bá du lịch qua văn hóa ẩm thực, với các tiêu chí: Ngon, lành, đặc sắc. Đáp ứng nhu cầu thị trường và định hướng phát triển văn hóa ẩm thực đến với du khách trong và ngoài nước.
+        </h4>
+        
+        <h4>
+            Ngoài ra dự án này còn mang tích chất thương mại, giúp người Việt Nam nói chung và khách du lịch nói riêng có thể đặt mua các món ăn, đặc sản ba miền của đất nước ta theo đó thanh toán một cách dễ dàng, nhanh chóng, tiện lợi.
+        </h4>
+</div>
+<section id="clow">
+    <div class="containero">
+        <div class="containerinfo">
+            <div>
+                <h2>CONTACT</h2>
+                <ul class="info">
+                    <li>
+                        <span><i class="fa fa-map-marker" aria-hidden="true"></i></span>
+                        <span>280 đường An Dương Vương, Phường 4, Quận 5, Thành Phố Hồ Chí Minh
+                        </span>
+                    </li>
+                    <li>
+                        <span><i class="fa fa-envelope" aria-hidden="true"></i></span>
+                        <span>Quannaoo@gmail.com</span>
+                    </li>
+                    <li>
+                        <span><i class="fa fa-phone-square" aria-hidden="true"></i></span>
+                        <span>+84 0392290338</span>
+                    </li>
+                </ul>
+            </div>
+            <ul class="sci">
+                <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                <li><a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
+                <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+            </ul>
+        </div>
+    </section>
+</html>

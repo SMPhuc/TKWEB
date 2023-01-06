@@ -6,11 +6,11 @@
 }
 
 :root{
-    --primaryColor:#fc0000a1;
+    --primaryColor:#D67D3E;
     --mainWhite: #ffffff ;
-    --backGroundColor: rgba(64, 255, 6, 0.856);
+    --backGroundColor: #BCCC9A;
     --mainBlue: rgb(71, 140, 190);
-    --secondaryColor: rgb(0, 0, 0);
+    --secondaryColor:#FF8E9E;
 }
 
 body{
@@ -19,7 +19,7 @@ body{
     background-image: url(/source/background.png);
     background-size: cover;
     background-repeat: no-repeat;
-    height: 510vh;
+    
 }
 
 
@@ -43,7 +43,7 @@ body{
 .navbar-container{
     background-color: var(--secondaryColor);
     overflow: hidden;
-    
+    border-bottom: 1px solid;
 }
    
 .topnav{
@@ -60,6 +60,7 @@ body{
     padding: 15px 50px;
     text-decoration: none;
     font-size: 15px;
+    
 }
 
 .topnav a:hover {
@@ -74,6 +75,7 @@ body{
     margin-top: 0px;
     padding: 20px;
     color: var(--mainWhite);
+    
 }
 
 .products{
@@ -87,7 +89,7 @@ body{
     border-radius: 0.5em;
     color: var(--mainWhite);
     background-color: var(--primaryColor);
-    border: 1px solid rgb(112, 50, 50);
+    border: 0px solid rgb(112, 50, 50);
     text-align: center;
     float: left;
     height: 400px;
@@ -115,7 +117,7 @@ body{
 .products :hover #options 
 {
     display: block;
-    background-color:rgba(255, 0, 0, 0.753);
+    background-color:rgba(209, 47, 47, 0.753);
     color:rgb(255, 255, 255);
     padding: 5px;
     margin-top: 5px;

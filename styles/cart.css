@@ -6,7 +6,7 @@
 .cart-info {
     color: var(--mainWhite);
     border-radius: 0.25rem;
-    padding: 0.01rem 0.9rem;
+    padding: 0.25rem 1.1rem;
     cursor: pointer;
     position: absolute;
     margin-right: 0%;
@@ -14,8 +14,8 @@
 }
 
 .cart-info:hover {
-    background: var(--primaryColor);
-    border-color: var(--primaryColor);
+    background: #D32626;
+    border-color: #D32626;
     color: black;
 }
 
@@ -27,7 +27,7 @@
     position: absolute;
     min-height: 24rem;
     background: var(--mainWhite);
-    top: 42px;
+    top: 50px;
     right: 0;
     transition: all 0.3s ease-in-out;
     width: 0;
